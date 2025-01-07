@@ -1,0 +1,250 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:meeting_id",
+ "creation": "2023-03-28 15:22:55.941550",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "meeting_details_section",
+  "topic",
+  "meeting_id",
+  "uuid",
+  "description",
+  "column_break_6",
+  "host_email",
+  "createdat",
+  "start_url",
+  "join_meeting_section",
+  "start_url_button",
+  "duration",
+  "starttime",
+  "timezone",
+  "column_break_column",
+  "join_url_button",
+  "password",
+  "join_url",
+  "advance_settings_section",
+  "use_pmi",
+  "host_video",
+  "participation_video",
+  "join_before_host",
+  "mute_upon_entry",
+  "add_registrant",
+  "add_registrants",
+  "invitation_message",
+  "zoom_emails",
+  "user_groupss"
+ ],
+ "fields": [
+  {
+   "fieldname": "topic",
+   "fieldtype": "Data",
+   "label": "Topic"
+  },
+  {
+   "default": "60",
+   "description": "In Minutes",
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "timezone",
+   "fieldtype": "Select",
+   "label": "Timezone",
+   "options": "Pacific/Midway\nPacific/Pago_Pago\nPacific/Honolulu\nAmerica/Anchorage\nAmerica/Vancouver\nAmerica/Los_Angeles\nAmerica/Tijuana\nAmerica/Edmonton\nAmerica/Denver\nAmerica/Phoenix\nAmerica/Mazatlan\nAmerica/Winnipeg\nAmerica/Regina\nAmerica/Chicago\nAmerica/Mexico_City\nAmerica/Guatemala\nAmerica/El_Salvador\nAmerica/Managua\nAmerica/Costa_Rica\nAmerica/Montreal\nAmerica/New_York\nAmerica/Indianapolis\nAmerica/Panama\nAmerica/Bogota\nAmerica/Lima\nAmerica/Halifax\nAmerica/Puerto_Rico\nAmerica/Caracas\nAmerica/Santiago\nAmerica/St_Johns\nAmerica/Montevideo\nAmerica/Araguaina\nAmerica/Argentina/Buenos_Aires\nAmerica/Godthab\nAmerica/Sao_Paulo\nAtlantic/Azores\nCanada/Atlantic\nAtlantic/Cape_Verde\nUTC\nEtc/Greenwich\nEurope/Belgrade\nCET\nAtlantic/Reykjavik\nEurope/Dublin\nEurope/London\nEurope/Lisbon\nAfrica/Casablanca\nAfrica/Nouakchott\nEurope/Oslo\nEurope/Copenhagen\nEurope/Brussels\nEurope/Berlin\nEurope/Helsinki\nEurope/Amsterdam\nEurope/Rome\nEurope/Stockholm\nEurope/Vienna\nEurope/Luxembourg\nEurope/Paris\nEurope/Zurich\nEurope/Madrid\nAfrica/Bangui\nAfrica/Algiers\nAfrica/Tunis\nAfrica/Harare\nAfrica/Nairobi\nEurope/Warsaw\nEurope/Prague\nEurope/Budapest\nEurope/Sofia\nEurope/Istanbul\nEurope/Athens\nEurope/Bucharest\nAsia/Nicosia\nAsia/Beirut\nAsia/Damascus\nAsia/Jerusalem\nAsia/Amman\nAfrica/Tripoli\nAfrica/Cairo\nAfrica/Johannesburg\nEurope/Moscow\nAsia/Baghdad\nAsia/Kuwait\nAsia/Riyadh\nAsia/Bahrain\nAsia/Qatar\nAsia/Aden\nAsia/Tehran\nAfrica/Khartoum\nAfrica/Djibouti\nAfrica/Mogadishu\nAsia/Dubai\nAsia/Muscat\nAsia/Baku\nAsia/Kabul\nAsia/Yekaterinburg\nAsia/Tashkent\nAsia/Calcutta\nAsia/Kathmandu\nAsia/Novosibirsk\nAsia/Almaty\nAsia/Dacca\nAsia/Krasnoyarsk\nAsia/Dhaka\nAsia/Bangkok\nAsia/Kolkata\nAsia/Saigon\nAsia/Jakarta\nAsia/Irkutsk\nAsia/Shanghai\nAsia/Hong_Kong\nAsia/Taipei\nAsia/Kuala_Lumpur\nAsia/Singapore\nAustralia/Perth\nAsia/Yakutsk\nAsia/Seoul\nAsia/Tokyo\nAustralia/Darwin\nAustralia/Adelaide\nPacific/Port_Moresby\nAustralia/Brisbane\nAustralia/Sydney\nAustralia/Hobart\nAsia/Magadan\nSST\nPacific/Noumea\nAsia/Kamchatka\nPacific/Fiji\nPacific/Auckland\nAsia/Kolkata\nEurope/Kiev"
+  },
+  {
+   "fieldname": "createdat",
+   "fieldtype": "Datetime",
+   "label": "CreatedAt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "join_url",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Join Url",
+   "read_only": 1
+  },
+  {
+   "fieldname": "join_url_button",
+   "fieldtype": "HTML",
+   "label": "Join Url Button",
+   "options": "<button>\n  <a href=\"{{ doc.join_url }}\" target=\"_blank\">Join URL</a>\n</button>\n<br>\n<br>"
+  },
+  {
+   "description": "Start Time should be greater than current time.",
+   "fieldname": "starttime",
+   "fieldtype": "Datetime",
+   "label": "StartTime"
+  },
+  {
+   "default": "true",
+   "fieldname": "host_video",
+   "fieldtype": "Check",
+   "label": "Host Video"
+  },
+  {
+   "default": "true",
+   "fieldname": "participation_video",
+   "fieldtype": "Check",
+   "label": "Participation Video"
+  },
+  {
+   "default": "false",
+   "fieldname": "join_before_host",
+   "fieldtype": "Check",
+   "label": "Allow participants to join anytime"
+  },
+  {
+   "default": "false",
+   "fieldname": "mute_upon_entry",
+   "fieldtype": "Check",
+   "label": "Mute participants upon entry"
+  },
+  {
+   "fieldname": "invitation_message",
+   "fieldtype": "Small Text",
+   "label": "Invitation Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "meeting_id",
+   "fieldtype": "Data",
+   "label": "Meeting Id",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "add_registrants",
+   "fieldtype": "Check",
+   "label": "Send notifications to below Users "
+  },
+  {
+   "fieldname": "meeting_details_section",
+   "fieldtype": "Section Break",
+   "label": "Meeting Details"
+  },
+  {
+   "fieldname": "column_break_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "advance_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Advance Settings"
+  },
+  {
+   "fieldname": "add_registrant",
+   "fieldtype": "Section Break",
+   "label": "Add Meeting Participants"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "start_url",
+   "fieldtype": "Text",
+   "hidden": 1,
+   "label": "Start Url",
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_url_button",
+   "fieldtype": "HTML",
+   "label": "Start Url Button",
+   "options": "<button>\n  <a href=\"{{ doc.start_url}}\" target=\"_blank\">Start URL</a>\n</button>\n<br>\n<br>\n",
+   "read_only": 1
+  },
+  {
+   "fieldname": "host_email",
+   "fieldtype": "Link",
+   "label": "Host Email",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "use_pmi",
+   "fieldtype": "Check",
+   "label": "Use PMI(Personal Meeting ID)"
+  },
+  {
+   "fieldname": "zoom_emails",
+   "fieldtype": "Table",
+   "label": "User Email: Personal Mail Group",
+   "options": "Zoom Emails"
+  },
+  {
+   "fieldname": "uuid",
+   "fieldtype": "Data",
+   "label": "UUID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "join_meeting_section",
+   "fieldtype": "Section Break",
+   "label": "Join Meeting"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "user_groupss",
+   "fieldtype": "Link",
+   "label": "User Notification: Onehash Group",
+   "options": "User Group"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-25 11:24:42.939488",
+ "modified_by": "Administrator",
+ "module": "Zoom Integration",
+ "name": "Zoom Meetings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

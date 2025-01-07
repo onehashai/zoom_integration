@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "creation": "2023-03-28 16:02:23.789257",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "client_id",
+  "client_secret",
+  "secret_token",
+  "redirect_uri",
+  "email_subscriptions_url",
+  "column_break_7",
+  "account_email_id",
+  "account_password",
+  "authentication_token"
+ ],
+ "fields": [
+  {
+   "description": "Fetch from Zoom Application",
+   "fieldname": "client_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Id",
+   "reqd": 1
+  },
+  {
+   "description": "Fetch from Zoom Application",
+   "fieldname": "client_secret",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Secret",
+   "reqd": 1
+  },
+  {
+   "fieldname": "secret_token",
+   "fieldtype": "Data",
+   "label": "Secret token",
+   "reqd": 1
+  },
+  {
+   "fieldname": "redirect_uri",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Redirect URI",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "authentication_token",
+   "fieldtype": "Data",
+   "label": "Authentication Token",
+   "read_only": 1
+  },
+  {
+   "fieldname": "email_subscriptions_url",
+   "fieldtype": "Data",
+   "label": "Email Subscriptions URL",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "account_email_id",
+   "fieldtype": "Data",
+   "label": "Account Email Id"
+  },
+  {
+   "fieldname": "account_password",
+   "fieldtype": "Data",
+   "label": "Account Password"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-09-13 16:48:52.089900",
+ "modified_by": "Administrator",
+ "module": "Zoom Integration",
+ "name": "ZoomSettings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
